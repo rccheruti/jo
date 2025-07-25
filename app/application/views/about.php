@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-include 'parts/header.php';
+// include 'parts/header.php';
 ?>
 
 <div class="container">
@@ -10,4 +10,6 @@ include 'parts/header.php';
 	<p><a href="<?php echo site_url('home'); ?>">Home</a> page.</p>
 </div>
 
-<?php include 'parts/footer.php'; ?>
+<?php 
+// include 'parts/footer.php'; 
+?>
