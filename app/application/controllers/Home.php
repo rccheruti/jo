@@ -12,9 +12,4 @@ class Home extends CI_Controller
 		$this->template->show('home', $data);
 		// $this->load->view('home');
 	}
-
-	public function about()
-	{
-		$this->load->view('about');
-	}
 }

@@ -7,13 +7,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<a class="nav-link active" aria-current="page" href="<?= base_url() ?>">Home</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="<?= base_url() ?>/usuarios">Usuários</a>
+			<a class="nav-link" href="<?= base_url() ?>usuarios">Usuários</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="<?= base_url() ?>/login">Login</a>
+			<a class="nav-link" href="<?= base_url() ?>login">Login</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="<?= base_url() ?>/logout">Logout</a>
+			<a class="nav-link" href="<?= base_url() ?>logout">Logout</a>
 		</li>
 	</ul>
 </nav>

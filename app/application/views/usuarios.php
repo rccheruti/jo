@@ -2,8 +2,13 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 ?>
 <div class="container">
-	<h1><?php echo $titulo; ?></h1>
-	<span class="text-end"><a href="<?= base_url() ?>">Voltar</a></span>
+	<div class="row">
+		<h1 class="title mb-4"><?php echo $titulo; ?></h1>
+		<div class="col-md-12 mb-4">
+			<a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCadastro">Adicionar Usuário</a>
+		</div>
+	</div>
+
 	<div class="table-responsive">
 		<table class="table table-hover">
 			<thead>
@@ -34,3 +39,5 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		</table>
 	</div>
 </div>
+
+<?php require_once 'inc/modal_cadastro.php' ?>
