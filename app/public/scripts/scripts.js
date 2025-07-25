@@ -58,3 +58,12 @@ $(document).ready(function () {
 		});
 	})();
 });
+
+// Function to handle form submission
+function editUser(userId) {
+	alert("Edit user with ID: " + userId);
+}
+
+function deleteUser(userId) {
+	alert("Delete user with ID: " + userId);
+}

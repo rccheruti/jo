@@ -24,7 +24,7 @@ class Usuarios_model extends CI_Model {
 
 	public function add_user($data)
 	{
-		var_dump($data); die();
-		// return $this->db->insert('usuarios', $data);
+		// var_dump($data); die();
+		return $this->db->insert('usuarios', $data);
 	}
 }

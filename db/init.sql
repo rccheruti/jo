@@ -12,9 +12,8 @@ CREATE TABLE IF NOT EXISTS usuarios (
   rg VARCHAR(20),
   data_emissao DATE,
   observacoes TEXT,
-  ativo TINYINT(1) DEFAULT 1,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  softdelete TINYINT(1) DEFAULT 0
+  softdelete DATETIME DEFAULT NULL,
 );
 INSERT INTO usuarios (
     nome,
@@ -27,7 +26,6 @@ INSERT INTO usuarios (
     rg,
     data_emissao,
     observacoes,
-    ativo,
     created_at,
     softdelete
   )
@@ -42,7 +40,6 @@ VALUES (
     '123456789',
     '2020-01-01',
     'Admin user',
-    1,
     NOW(),
-    0
+    NULL
   );
