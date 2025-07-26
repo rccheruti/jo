@@ -10,6 +10,5 @@ class Home extends CI_Controller
 		$this->load->library('template');
 		$data['titulo'] = 'Página Inicial';
 		$this->template->show('home', $data);
-		// $this->load->view('home');
 	}
 }

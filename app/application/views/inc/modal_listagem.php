@@ -29,22 +29,26 @@ defined('BASEPATH') or exit('No direct script access allowed');
 								</tr>
 							</thead>
 							<tbody>
-								<?php foreach ($usuarios as $usuario): ?>
+								<?php foreach ($usuarios as $usuario):
+									if ($usuario['softdelete']) {
+										continue;
+									}
+								?>
 									<tr>
-										<td><?php echo $usuario['id']; ?></td>
-										<td><?php echo $usuario['nome']; ?></td>
-										<td><?php echo $usuario['email']; ?></td>
-										<td><?php echo $usuario['telefone']; ?></td>
-										<td><?php echo $usuario['celular']; ?></td>
-										<td><?php echo date('d/m/Y', strtotime($usuario['data_nascimento'])); ?></td>
-										<td><?php echo $usuario['estado_civil']; ?></td>
-										<td><?php echo $usuario['cpf']; ?></td>
-										<td><?php echo $usuario['rg']; ?></td>
-										<td><?php echo date('d/m/Y', strtotime($usuario['data_emissao'])); ?></td>
-										<td><?php echo $usuario['observacoes']; ?></td>
+										<td data-field="id"><?php echo $usuario['id']; ?></td>
+										<td data-field="nome"><?php echo $usuario['nome']; ?></td>
+										<td data-field="email"><?php echo $usuario['email']; ?></td>
+										<td data-field="telefone"><?php echo $usuario['telefone']; ?></td>
+										<td data-field="celular"><?php echo $usuario['celular']; ?></td>
+										<td data-field="data_nascimento"><?php echo date('d/m/Y', strtotime($usuario['data_nascimento'])); ?></td>
+										<td data-field="estado_civil"><?php echo $usuario['estado_civil']; ?></td>
+										<td data-field="cpf"><?php echo $usuario['cpf']; ?></td>
+										<td data-field="rg"><?php echo $usuario['rg']; ?></td>
+										<td data-field="data_emissao"><?php echo date('d/m/Y', strtotime($usuario['data_emissao'])); ?></td>
+										<td data-field="observacoes"><?php echo $usuario['observacoes']; ?></td>
 										<td>
-											<button class="btn btn-warning btn-sm" onclick="editUser(<?php echo $usuario['id']; ?>)">Editar</button>
-											<button class="btn btn-danger btn-sm" onclick="deleteUser(<?php echo $usuario['id']; ?>)">Excluir</button>
+											<button class="btn btn-warning btn-sm mb-1" onclick="editUser(<?php echo $usuario['id']; ?>,this)">Editar</button>
+											<button class="btn btn-danger btn-sm mb-1" onclick="deleteUser(<?php echo $usuario['id']; ?>)">Excluir</button>
 										</td>
 									</tr>
 								<?php endforeach; ?>

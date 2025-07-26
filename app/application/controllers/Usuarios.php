@@ -12,7 +12,6 @@ class Usuarios extends CI_Controller
 		$data['titulo'] = 'Usuários';
 		$this->template->show('usuarios', $data);
 	}
-	//Método para obter todos os usuários via API
 	public function getAll()
 	{
 		$this->load->model('Usuarios_model');
@@ -34,6 +33,7 @@ class Usuarios extends CI_Controller
 
 		if ($this->Usuarios_model->add_user($data)) {
 			$response = ['success' => 'Usuário cadastrado com sucesso!'];
+			redirect('usuarios');
 		} else {
 			$response = ['error' => 'Erro ao cadastrar usuário.'];
 		}
@@ -58,7 +58,7 @@ class Usuarios extends CI_Controller
 			->set_content_type('application/json')
 			->set_output(json_encode($response));
 	}
-	
+
 	public function softDeleteUser($id)
 	{
 		$this->load->model('Usuarios_model');
