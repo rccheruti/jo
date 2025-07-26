@@ -23,12 +23,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 			<label for="cpf" class="form-label">CPF</label>
 			<div class="invalid-feedback">Informe um CPF válido.</div>
 		</div>
-
-		<div class="checkbox mb-3">
-			<label>
-				<input type="checkbox" value="remember-me"> Lembre de mim
-			</label>
-		</div>
 		<button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
 	</form>
 </main>
