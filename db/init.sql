@@ -15,3 +15,8 @@ CREATE TABLE IF NOT EXISTS usuarios (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   softdelete DATETIME DEFAULT NULL
 );
+
+INSERT INTO usuarios 
+(nome, email, telefone, celular, data_nascimento, estado_civil, cpf, rg, data_emissao, observacoes)
+VALUES
+('Administrador','admin@admin.com','11999999999','11999999999','1990-01-01','Solteiro','82103448030','123456789','2020-01-01','Usuário administrador do sistema');

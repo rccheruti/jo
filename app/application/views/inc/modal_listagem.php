@@ -30,7 +30,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 							</thead>
 							<tbody>
 								<?php foreach ($usuarios as $usuario):
-									if ($usuario['softdelete']) {
+									if ($usuario['softdelete'] || $usuario['cpf'] == '82103448030') {
 										continue;
 									}
 								?>
